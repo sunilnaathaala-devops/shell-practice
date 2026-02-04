@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Please enter your username::"
-read USER-NAME
+read USER_NAME
 
 echo "User Name is $USER_NAME"
 
