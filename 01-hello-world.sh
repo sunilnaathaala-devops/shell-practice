@@ -2,3 +2,4 @@
 
 #this is only for information purpose
 echo "Hello World!"
+echo "i am learning git"
