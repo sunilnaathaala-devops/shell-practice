@@ -6,10 +6,12 @@ NUMBER=$1
 # -lt -> less than
 # -eq -> equal to
 # -ne -> not equal
-if [$NUMBER -gt 20]; then
+if [ $NUMBER -gt 20 ]; then
     echo "Given number: $NUMBER is greater than 20"
-elif [$NUMBER -eq 20]; then
+elif [ $NUMBER -eq 20 ]; then
     echo "Given number: $NUMBER is equal to 20"
+elif [ $NUMBER -lt 20 ]; then
+    echo "Given number: $NUMBER is less than to 20"
 else
-    echo "$NUMBER is not equal to 20"
+    echo "Given number: $NUMBER is not equal to 20"
 fi
