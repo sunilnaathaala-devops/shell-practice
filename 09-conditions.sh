@@ -1,12 +1,12 @@
 #!/bin/bash
 
-NUMBER=25
+NUMBER=$1
 
 # -gt -> greater than
 # -lt -> less than
 # -eq -> equal to
 # -ne -> not equal
-if [$NUMBER -gt 20] then
+if [$NUMBER -gt 20]; then
 echo "$NUMBER is greater than 20"
 elif [$NUMBER -eq 20]; then
 echo "$NUMBER is equal to 20"
