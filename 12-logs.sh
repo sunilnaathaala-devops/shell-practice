@@ -30,8 +30,9 @@ echo " "
 echo "installing MYSQL"
 dnf install mysql -y &>> $LOGS_FILE
 VALIDATE $? "Installing MySQL"
-echo cd" "
+echo " "
 
 echo "installing Nodejs"
 dnf install nodejs -y &>> $LOGS_FILE
 VALIDATE $? "Installing NodeJS"
+echo " "
