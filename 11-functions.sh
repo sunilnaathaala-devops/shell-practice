@@ -21,12 +21,12 @@ fi
 echo "installing Nginx"
 dnf install nginx -y
 VALIDATE $? "Installing Nginx"
-echo" "
+echo " "
 
 echo "installing MYSQL"
 dnf install mysql -y
 VALIDATE $? "Installing MySQL"
-echo" "
+echo " "
 
 echo "installing Nodejs"
 dnf install nodejs -y
