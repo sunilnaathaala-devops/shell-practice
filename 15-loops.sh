@@ -22,10 +22,15 @@ fi
 
 }
 
-for package in $@
+for package in $@  #sudo sh 14-loops.sh nginx mysql nodejs
 do
-    echo "installing $package"
-    dnf install $package -y &>> $LOGS_FILE
-    VALIDATE $? "Installing $package"
-    echo " "
+    dnf list installed $package &>> $LOGS_FILE
+    if [ $? -ne 0 ]; then
+        echo "$package not installed, installing now"
+        dnf install $package -y &>> $LOGS_FILE
+        VALIDATE $? "Installing $package"
+        echo " "
+    else
+        echo "$package already installed, skipping"
+    fi
 done
